@@ -42,7 +42,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
-    flex-grow: 1; /* Allow this section to grow and take available space */
+    flex-grow: 1; 
 }
 
 .achievement-card {
