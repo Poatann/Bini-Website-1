@@ -1,0 +1,168 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffccdd;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 4px solid #f48fb1;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff007f;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+h2 {
+    color: #ff007f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.activity-card {
+    padding: 20px;
+    background-color: #ffe6f2;
+    border: 2px solid #ff007f;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.messages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.message-card {
+    padding: 15px;
+    background-color: #fff3f6;
+    border: 2px solid #ff007f;
+    border-radius: 10px;
+    text-align: center;
+    font-style: italic;
+    width: 320px;
+}
+
+.messages-grid video {
+    width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.messages-grid video:-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-card {
+    overflow: hidden;
+    height: 300px;
+    border: 2px solid #ff007f;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#bini-memorable-performances {
+    padding: 20px;
+}
+
+#bini-memorable-performances h2 {
+    color: #ff007f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.semi-fullscreen {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.semi-fullscreen img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+footer {
+    background-color: pink;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 4px solid #f48fb1;
+}
+
+@media only screen and (max-width: 768px) {
+    header .logo {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .activity-card, .message-card, .gallery-card {
+        padding: 15px;
+    }
+}
